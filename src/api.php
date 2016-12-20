@@ -22,7 +22,7 @@ $app->get('/login/{token}', function (Request $request, Response $response) {
       exit;
     }
     $decodedBody = $res->getDecodedBody();
-    return $response->withHeader('Content-Type', 'application/json')->withJson($decodedBody);
+    return $response->withHeader('Content-Type', 'application/json')->withHeader('Access-Control-Allow-Origin', 'http://mysite')->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')->withJson($decodedBody);
 });
 $app->run();
 
