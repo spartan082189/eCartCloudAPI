@@ -30,7 +30,7 @@ $app->get('/login/{token}', function (Request $request, Response $response) {
 });
 
 //----------------------------------------
-// Products method - /search/{query}
+// Search method - /search/{query}
 // ---------------------------------------
 $app->get('/search/{query}', function(Request $request, Response $response) {
   try {
